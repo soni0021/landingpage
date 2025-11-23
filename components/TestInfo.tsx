@@ -202,7 +202,7 @@ export default function TestInfo() {
         >
           <a
             href="#registration"
-            className="inline-block bg-[#d82209] hover:bg-[#b91c1c] text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg transition-colors min-h-[56px] flex items-center justify-center"
+            className="inline-block bg-[#d82209] hover:bg-[#b91c1c] text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg transition-colors min-h-[56px] flex items-center justify-center"
           >
             Register Now
           </a>

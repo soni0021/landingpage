@@ -1,7 +1,8 @@
 import { Pool } from "pg";
 
 // Parse the connection string
-const connectionString = process.env.NEON_DATABASE_URL;
+const connectionString = process.env.NEON_DATABASE_URL || 'postgresql://neondb_owner:npg_KLJVinH5CN6e@ep-misty-lake-ahb862ep-pooler.c-3.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require'
+;
 
 // Create a connection pool
 const pool = new Pool({
