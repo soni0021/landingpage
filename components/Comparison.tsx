@@ -86,7 +86,7 @@ export default function Comparison() {
           </div>
 
           {/* Mobile Card View */}
-          <div className="md:hidden space-y-4">
+          <div className="md:hidden space-y-4 sm:space-y-5">
             {comparisonData.map((item, index) => (
               <motion.div
                 key={index}
@@ -94,23 +94,23 @@ export default function Comparison() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="bg-white rounded-lg shadow-sm p-4 border border-gray-200"
+                className="bg-white rounded-xl shadow-sm p-5 sm:p-6 border border-gray-200"
               >
-                <h3 className="font-bold text-base text-gray-900 mb-3">{item.feature}</h3>
-                <div className="space-y-3">
-                  <div className="border-l-4 border-red-400 pl-3">
-                    <div className="flex items-start gap-2 mb-1.5">
-                      <X className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" />
-                      <span className="font-medium text-sm text-gray-700">Regular Coaching + PG</span>
+                <h3 className="font-bold text-lg sm:text-xl text-gray-900 mb-4">{item.feature}</h3>
+                <div className="space-y-4">
+                  <div className="border-l-4 border-red-400 pl-4">
+                    <div className="flex items-start gap-2 mb-2">
+                      <X className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                      <span className="font-semibold text-base text-gray-700">Regular Coaching + PG</span>
                     </div>
-                    <p className="text-gray-600 text-xs leading-relaxed">{item.regular}</p>
+                    <p className="text-gray-600 text-base leading-relaxed">{item.regular}</p>
                   </div>
-                  <div className="border-l-4 border-green-500 pl-3">
-                    <div className="flex items-start gap-2 mb-1.5">
-                      <Check className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="font-medium text-sm text-gray-700">AMRC Residential</span>
+                  <div className="border-l-4 border-green-500 pl-4">
+                    <div className="flex items-start gap-2 mb-2">
+                      <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <span className="font-semibold text-base text-gray-700">AMRC Residential</span>
                     </div>
-                    <p className="text-gray-600 text-xs leading-relaxed">{item.amrc}</p>
+                    <p className="text-gray-600 text-base leading-relaxed">{item.amrc}</p>
                   </div>
                 </div>
               </motion.div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import RegistrationForm from "@/components/RegistrationForm";
 import Benefits from "@/components/Benefits";
@@ -14,6 +15,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <Navbar />
       <Hero />
       <TargetAudience />
       <Comparison />

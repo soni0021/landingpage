@@ -222,7 +222,7 @@ export default function RegistrationForm() {
   };
 
   return (
-    <section id="registration" className="py-12 sm:py-16 bg-white">
+    <section id="registration" className="py-12 sm:py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -231,16 +231,16 @@ export default function RegistrationForm() {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto"
         >
-          <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               AMRC-SAT Registration
             </h2>
-            <p className="text-base text-gray-600">
+            <p className="text-base sm:text-lg text-gray-600 px-4">
               Fill in your details to register for the entrance exam
             </p>
           </div>
 
-          <div className="bg-white rounded-lg shadow-md p-6 sm:p-8 border border-gray-200">
+          <div className="bg-white rounded-xl shadow-lg p-5 sm:p-8 lg:p-10 border border-gray-200">
             {/* Error Message */}
             {error && (
               <div className="mb-6 bg-red-50 border-l-4 border-red-500 p-4 rounded-lg">
@@ -267,14 +267,14 @@ export default function RegistrationForm() {
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
               {/* Mobile Number */}
               <div>
-                <label className="flex items-center gap-2 text-gray-700 font-medium mb-1.5 text-sm">
-                  <Phone className="w-4 h-4 text-[#d82209]" />
+                <label className="flex items-center gap-2 text-gray-700 font-semibold mb-2 sm:mb-2.5 text-base">
+                  <Phone className="w-5 h-5 text-[#d82209]" />
                   Mobile Number *
                 </label>
-                <div className="flex gap-2">
+                <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3">
                   <input
                     type="tel"
                     name="mobile"
@@ -282,14 +282,14 @@ export default function RegistrationForm() {
                     onChange={handleChange}
                     maxLength={10}
                     required
-                    className="flex-1 px-3 py-2.5 text-base rounded-lg border border-gray-300 focus:border-[#d82209] focus:outline-none focus:ring-2 focus:ring-[#d82209]/20 transition-all"
+                    className="flex-1 px-4 py-3.5 sm:py-3 text-base rounded-xl border-2 border-gray-300 focus:border-[#d82209] focus:outline-none focus:ring-2 focus:ring-[#d82209]/20 transition-all min-h-[48px]"
                     placeholder="10-digit mobile number"
                   />
                   <button
                     type="button"
                     onClick={handleSendOTP}
                     disabled={otpSent || isSendingOTP}
-                    className="px-4 py-2.5 bg-[#d82209] text-white rounded-lg text-sm font-medium hover:bg-[#b91c1c] transition-all disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+                    className="px-5 sm:px-6 py-3.5 sm:py-3 bg-[#d82209] text-white rounded-full text-base font-semibold hover:bg-[#b91c1c] transition-all disabled:opacity-50 disabled:cursor-not-allowed min-h-[48px] whitespace-nowrap"
                   >
                     {isSendingOTP ? "Sending..." : otpSent ? "Sent" : "Send OTP"}
                   </button>
@@ -303,8 +303,8 @@ export default function RegistrationForm() {
                   animate={{ opacity: 1, height: "auto" }}
                   className="overflow-hidden"
                 >
-                  <label className="flex items-center gap-2 text-gray-700 font-medium mb-1.5 text-sm">
-                    <Phone className="w-4 h-4 text-[#d82209]" />
+                  <label className="flex items-center gap-2 text-gray-700 font-semibold mb-2 sm:mb-2.5 text-base">
+                    <Phone className="w-5 h-5 text-[#d82209]" />
                     Verify OTP *
                   </label>
                   <input
@@ -314,7 +314,7 @@ export default function RegistrationForm() {
                     onChange={handleChange}
                     maxLength={6}
                     required
-                    className="w-full px-3 py-2.5 text-base rounded-lg border border-gray-300 focus:border-[#d82209] focus:outline-none focus:ring-2 focus:ring-[#d82209]/20 transition-all"
+                    className="w-full px-4 py-3.5 sm:py-3 text-base rounded-xl border-2 border-gray-300 focus:border-[#d82209] focus:outline-none focus:ring-2 focus:ring-[#d82209]/20 transition-all min-h-[48px]"
                     placeholder="6-digit OTP"
                   />
                 </motion.div>
@@ -322,8 +322,8 @@ export default function RegistrationForm() {
 
               {/* Student Name */}
               <div>
-                <label className="flex items-center gap-2 text-gray-700 font-medium mb-1.5 text-sm">
-                  <User className="w-4 h-4 text-[#d82209]" />
+                <label className="flex items-center gap-2 text-gray-700 font-semibold mb-2 sm:mb-2.5 text-base">
+                  <User className="w-5 h-5 text-[#d82209]" />
                   Student Name *
                 </label>
                 <input
@@ -332,15 +332,15 @@ export default function RegistrationForm() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-3 py-2.5 text-base rounded-lg border border-gray-300 focus:border-[#d82209] focus:outline-none focus:ring-2 focus:ring-[#d82209]/20 transition-all"
+                  className="w-full px-4 py-3.5 sm:py-3 text-base rounded-xl border-2 border-gray-300 focus:border-[#d82209] focus:outline-none focus:ring-2 focus:ring-[#d82209]/20 transition-all min-h-[48px]"
                   placeholder="Full name"
                 />
               </div>
 
               {/* Email */}
               <div>
-                <label className="flex items-center gap-2 text-gray-700 font-medium mb-1.5 text-sm">
-                  <Mail className="w-4 h-4 text-[#d82209]" />
+                <label className="flex items-center gap-2 text-gray-700 font-semibold mb-2 sm:mb-2.5 text-base">
+                  <Mail className="w-5 h-5 text-[#d82209]" />
                   Email ID *
                 </label>
                 <input
@@ -349,15 +349,15 @@ export default function RegistrationForm() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-3 py-2.5 text-base rounded-lg border border-gray-300 focus:border-[#d82209] focus:outline-none focus:ring-2 focus:ring-[#d82209]/20 transition-all"
+                  className="w-full px-4 py-3.5 sm:py-3 text-base rounded-xl border-2 border-gray-300 focus:border-[#d82209] focus:outline-none focus:ring-2 focus:ring-[#d82209]/20 transition-all min-h-[48px]"
                   placeholder="your.email@example.com"
                 />
               </div>
 
               {/* Date of Birth */}
               <div>
-                <label className="flex items-center gap-2 text-gray-700 font-medium mb-1.5 text-sm">
-                  <Calendar className="w-4 h-4 text-[#d82209]" />
+                <label className="flex items-center gap-2 text-gray-700 font-semibold mb-2 sm:mb-2.5 text-base">
+                  <Calendar className="w-5 h-5 text-[#d82209]" />
                   Date of Birth *
                 </label>
                 <input
@@ -366,17 +366,17 @@ export default function RegistrationForm() {
                   value={formData.dob}
                   onChange={handleChange}
                   required
-                  className="w-full px-3 py-2.5 text-base rounded-lg border border-gray-300 focus:border-[#d82209] focus:outline-none focus:ring-2 focus:ring-[#d82209]/20 transition-all"
+                  className="w-full px-4 py-3.5 sm:py-3 text-base rounded-xl border-2 border-gray-300 focus:border-[#d82209] focus:outline-none focus:ring-2 focus:ring-[#d82209]/20 transition-all min-h-[48px]"
                 />
               </div>
 
               {/* Test Mode */}
               <div>
-                <label className="flex items-center gap-2 text-gray-700 font-medium mb-1.5 text-sm">
-                  <Clock className="w-4 h-4 text-[#d82209]" />
+                <label className="flex items-center gap-2 text-gray-700 font-semibold mb-2 sm:mb-2.5 text-base">
+                  <Clock className="w-5 h-5 text-[#d82209]" />
                   Select Test Mode *
                 </label>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4">
                   <label className="relative">
                     <input
                       type="radio"
@@ -387,7 +387,7 @@ export default function RegistrationForm() {
                       required
                       className="peer sr-only"
                     />
-                    <div className="px-4 py-3 rounded-lg border border-gray-300 peer-checked:border-[#d82209] peer-checked:bg-[#d82209]/10 cursor-pointer transition-all text-center font-medium text-sm">
+                    <div className="px-4 sm:px-6 py-3.5 sm:py-4 rounded-xl border-2 border-gray-300 peer-checked:border-[#d82209] peer-checked:bg-[#d82209]/10 cursor-pointer transition-all text-center font-semibold text-base min-h-[48px] flex items-center justify-center">
                       Online
                     </div>
                   </label>
@@ -401,7 +401,7 @@ export default function RegistrationForm() {
                       required
                       className="peer sr-only"
                     />
-                    <div className="px-4 py-3 rounded-lg border border-gray-300 peer-checked:border-[#d82209] peer-checked:bg-[#d82209]/10 cursor-pointer transition-all text-center font-medium text-sm">
+                    <div className="px-4 sm:px-6 py-3.5 sm:py-4 rounded-xl border-2 border-gray-300 peer-checked:border-[#d82209] peer-checked:bg-[#d82209]/10 cursor-pointer transition-all text-center font-semibold text-base min-h-[48px] flex items-center justify-center">
                       Offline
                     </div>
                   </label>
@@ -411,8 +411,8 @@ export default function RegistrationForm() {
               {/* Test Date - Only show if test mode is selected */}
               {formData.testMode && (
                 <div>
-                  <label className="flex items-center gap-2 text-gray-700 font-medium mb-1.5 text-sm">
-                    <Calendar className="w-4 h-4 text-[#d82209]" />
+                  <label className="flex items-center gap-2 text-gray-700 font-semibold mb-2 sm:mb-2.5 text-base">
+                    <Calendar className="w-5 h-5 text-[#d82209]" />
                     Test Date *
                   </label>
                   <select
@@ -420,7 +420,7 @@ export default function RegistrationForm() {
                     value={formData.testDate}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 py-2.5 text-base rounded-lg border border-gray-300 focus:border-[#d82209] focus:outline-none focus:ring-2 focus:ring-[#d82209]/20 transition-all bg-white"
+                    className="w-full px-4 py-3.5 sm:py-3 text-base rounded-xl border-2 border-gray-300 focus:border-[#d82209] focus:outline-none focus:ring-2 focus:ring-[#d82209]/20 transition-all bg-white min-h-[48px]"
                   >
                     <option value="">Select test date</option>
                     {getAvailableDates().map((date) => (
@@ -430,7 +430,7 @@ export default function RegistrationForm() {
                     ))}
                   </select>
                   {formData.testMode === "online" && formData.testDate === "Any date from 1st Dec to 15th Dec" && (
-                    <p className="text-xs text-gray-500 mt-1.5">
+                    <p className="text-sm text-gray-500 mt-2">
                       Flexible option available for online mode
                     </p>
                   )}
@@ -444,8 +444,8 @@ export default function RegistrationForm() {
                   animate={{ opacity: 1, height: "auto" }}
                   className="overflow-hidden"
                 >
-                  <label className="flex items-center gap-2 text-gray-700 font-medium mb-1.5 text-sm">
-                    <Clock className="w-4 h-4 text-[#d82209]" />
+                  <label className="flex items-center gap-2 text-gray-700 font-semibold mb-2 sm:mb-2.5 text-base">
+                    <Clock className="w-5 h-5 text-[#d82209]" />
                     Select Time Slot *
                   </label>
                   <select
@@ -453,7 +453,7 @@ export default function RegistrationForm() {
                     value={formData.timeSlot}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 py-2.5 text-base rounded-lg border border-gray-300 focus:border-[#d82209] focus:outline-none focus:ring-2 focus:ring-[#d82209]/20 transition-all bg-white"
+                    className="w-full px-4 py-3.5 sm:py-3 text-base rounded-xl border-2 border-gray-300 focus:border-[#d82209] focus:outline-none focus:ring-2 focus:ring-[#d82209]/20 transition-all bg-white min-h-[48px]"
                   >
                     <option value="">Select time slot</option>
                     {getAvailableTimeSlots().map((slot) => (
@@ -467,8 +467,8 @@ export default function RegistrationForm() {
 
               {/* Course */}
               <div>
-                <label className="flex items-center gap-2 text-gray-700 font-medium mb-1.5 text-sm">
-                  <BookOpen className="w-4 h-4 text-[#d82209]" />
+                <label className="flex items-center gap-2 text-gray-700 font-semibold mb-2 sm:mb-2.5 text-base">
+                  <BookOpen className="w-5 h-5 text-[#d82209]" />
                   Course *
                 </label>
                 <select
@@ -476,7 +476,7 @@ export default function RegistrationForm() {
                   value={formData.course}
                   onChange={handleChange}
                   required
-                  className="w-full px-3 py-2.5 text-base rounded-lg border border-gray-300 focus:border-[#d82209] focus:outline-none focus:ring-2 focus:ring-[#d82209]/20 transition-all bg-white"
+                  className="w-full px-4 py-3.5 sm:py-3 text-base rounded-xl border-2 border-gray-300 focus:border-[#d82209] focus:outline-none focus:ring-2 focus:ring-[#d82209]/20 transition-all bg-white min-h-[48px]"
                 >
                   <option value="">Select course</option>
                   {courses.map((course) => (
@@ -489,8 +489,8 @@ export default function RegistrationForm() {
 
               {/* State */}
               <div>
-                <label className="flex items-center gap-2 text-gray-700 font-medium mb-1.5 text-sm">
-                  <MapPin className="w-4 h-4 text-[#d82209]" />
+                <label className="flex items-center gap-2 text-gray-700 font-semibold mb-2 sm:mb-2.5 text-base">
+                  <MapPin className="w-5 h-5 text-[#d82209]" />
                   State *
                 </label>
                 <select
@@ -498,7 +498,7 @@ export default function RegistrationForm() {
                   value={formData.state}
                   onChange={handleChange}
                   required
-                  className="w-full px-3 py-2.5 text-base rounded-lg border border-gray-300 focus:border-[#d82209] focus:outline-none focus:ring-2 focus:ring-[#d82209]/20 transition-all bg-white"
+                  className="w-full px-4 py-3.5 sm:py-3 text-base rounded-xl border-2 border-gray-300 focus:border-[#d82209] focus:outline-none focus:ring-2 focus:ring-[#d82209]/20 transition-all bg-white min-h-[48px]"
                 >
                   <option value="">Select your state</option>
                   {states.map((state) => (
@@ -515,7 +515,7 @@ export default function RegistrationForm() {
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.99 }}
-                className="w-full bg-[#d82209] hover:bg-[#b91c1c] text-white py-3 rounded-lg font-semibold text-base shadow-md transition-colors disabled:opacity-50 disabled:cursor-not-allowed mt-2"
+                className="w-full bg-[#d82209] hover:bg-[#b91c1c] text-white py-4 sm:py-4 rounded-full font-bold text-lg shadow-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed mt-4 min-h-[56px]"
               >
                 {isSubmitting ? "Registering..." : "Register Now"}
               </motion.button>

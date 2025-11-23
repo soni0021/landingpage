@@ -42,16 +42,16 @@ export default function TargetAudience() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-12"
+            className="mb-10 sm:mb-12"
           >
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-              <div className="flex items-center gap-3 mb-8">
-                <Users className="w-8 h-8 text-primary-600" />
-                <h3 className="text-3xl font-bold text-gray-900">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg border border-gray-100">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+                <Users className="w-8 h-8 sm:w-10 sm:h-10 text-[#d82209]" />
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
                   For Students Presently In
                 </h3>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
                 {targetClasses.map((item, index) => (
                   <motion.div
                     key={index}
@@ -59,12 +59,12 @@ export default function TargetAudience() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="bg-white rounded-lg p-4 text-center border border-gray-200 hover:border-[#d82209] transition-colors shadow-sm"
+                    className="bg-white rounded-xl p-4 sm:p-5 text-center border-2 border-gray-200 hover:border-[#d82209] transition-colors shadow-sm"
                   >
-                    <div className="text-3xl font-bold text-[#d82209] mb-1.5">
+                    <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#d82209] mb-2">
                       {item.grade}
                     </div>
-                    <div className="text-xs text-gray-600 font-medium">
+                    <div className="text-xs sm:text-sm text-gray-600 font-medium">
                       {item.description}
                     </div>
                   </motion.div>
@@ -80,12 +80,12 @@ export default function TargetAudience() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="bg-[#d82209] rounded-lg p-6 shadow-md text-white">
-              <div className="flex items-center gap-2 mb-6">
-                <Target className="w-5 h-5" />
-                <h3 className="text-xl font-bold">Target Exams</h3>
+            <div className="bg-[#d82209] rounded-xl p-6 sm:p-8 shadow-md text-white">
+              <div className="flex items-center gap-3 mb-6 sm:mb-8">
+                <Target className="w-6 h-6 sm:w-7 sm:h-7" />
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold">Target Exams</h3>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
                 {exams.map((exam, index) => (
                   <motion.div
                     key={index}
@@ -93,10 +93,10 @@ export default function TargetAudience() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20"
+                    className="bg-white/10 backdrop-blur-sm rounded-xl p-5 sm:p-6 border border-white/20"
                   >
-                    <div className="text-3xl font-bold mb-1.5">{exam.name}</div>
-                    <div className="text-sm text-white/80">{exam.fullName}</div>
+                    <div className="text-3xl sm:text-4xl font-bold mb-2">{exam.name}</div>
+                    <div className="text-sm sm:text-base text-white/80">{exam.fullName}</div>
                   </motion.div>
                 ))}
               </div>
