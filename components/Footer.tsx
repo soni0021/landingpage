@@ -12,7 +12,7 @@ export default function Footer() {
               <span className="text-2xl sm:text-3xl">📞</span>{" "}
               <a 
                 href="tel:+919007002666" 
-                className="hover:text-yellow-300 transition-colors font-bold min-h-[48px] inline-flex items-center"
+                className="hover:text-white/80 transition-colors font-bold min-h-[48px] inline-flex items-center"
               >
                 +91 9007002666
               </a>
@@ -24,7 +24,7 @@ export default function Footer() {
                 href="https://www.anandmani.in" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:text-yellow-300 transition-colors font-bold min-h-[48px] inline-flex items-center"
+                className="hover:text-white/80 transition-colors font-bold min-h-[48px] inline-flex items-center"
               >
                 www.anandmani.in
               </a>

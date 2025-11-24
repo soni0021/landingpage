@@ -48,7 +48,7 @@ export default function Comparison() {
           className="text-center mb-10"
         >
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
-            Regular Coaching vs AMRC Residential
+            Regular Coaching vs AMRC 
           </h2>
           <p className="text-base text-gray-600 max-w-2xl mx-auto">
             See why thousands of students choose our residential program
@@ -105,9 +105,9 @@ export default function Comparison() {
                     </div>
                     <p className="text-gray-600 text-base leading-relaxed">{item.regular}</p>
                   </div>
-                  <div className="border-l-4 border-green-500 pl-4">
+                  <div className="border-l-4 border-[#d82209] pl-4">
                     <div className="flex items-start gap-2 mb-2">
-                      <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <Check className="w-5 h-5 text-[#d82209] flex-shrink-0 mt-0.5" />
                       <span className="font-semibold text-base text-gray-700">AMRC Residential</span>
                     </div>
                     <p className="text-gray-600 text-base leading-relaxed">{item.amrc}</p>

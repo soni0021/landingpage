@@ -1,28 +1,27 @@
 "use client";
 
-import { useState } from "react";
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import RegistrationForm from "@/components/RegistrationForm";
+import HeroWithForm from "@/components/HeroWithForm";
+import TestDates from "@/components/TestDates";
 import Benefits from "@/components/Benefits";
 import TestInfo from "@/components/TestInfo";
-import PastRecords from "@/components/PastRecords";
 import TargetAudience from "@/components/TargetAudience";
-import LowestFee from "@/components/LowestFee";
 import Comparison from "@/components/Comparison";
+import PastRecords from "@/components/PastRecords";
+import LowestFee from "@/components/LowestFee";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Navbar />
-      <Hero />
-      <TargetAudience />
-      <Comparison />
+      <HeroWithForm />
+      <TestDates />
       <LowestFee />
-      <RegistrationForm />
       <Benefits />
       <TestInfo />
+      <TargetAudience />
+      <Comparison />
       <PastRecords />
       <Footer />
     </main>

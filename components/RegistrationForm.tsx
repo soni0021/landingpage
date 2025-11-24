@@ -222,25 +222,25 @@ export default function RegistrationForm() {
   };
 
   return (
-    <section id="registration" className="py-12 sm:py-16 lg:py-20 bg-white">
+    <section id="registration" className="py-8 sm:py-12 lg:py-16 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto"
+          className="max-w-2xl mx-auto"
         >
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+          <div className="mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
               AMRC-SAT Registration
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 px-4">
-              Fill in your details to register for the entrance exam
+            <p className="text-sm sm:text-base text-gray-600">
+              *All fields are mandatory
             </p>
           </div>
 
-          <div className="bg-white rounded-xl shadow-lg p-5 sm:p-8 lg:p-10 border border-gray-200">
+          <div className="bg-white rounded-lg shadow-md p-5 sm:p-6 lg:p-8 border border-gray-200">
             {/* Error Message */}
             {error && (
               <div className="mb-6 bg-red-50 border-l-4 border-red-500 p-4 rounded-lg">

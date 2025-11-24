@@ -38,19 +38,19 @@ const infoSections = [
     icon: Info,
     title: "Test Instructions",
     description: "Detailed instructions for the AMRC-SAT exam",
-    color: "from-blue-500 to-blue-700",
+    color: "from-[#d82209] to-[#b91c1c]",
   },
   {
     icon: BookOpen,
     title: "AMRC-SAT Syllabus",
     description: "Complete syllabus for NEET/JEE preparation",
-    color: "from-green-500 to-green-700",
+    color: "from-[#d82209] to-[#b91c1c]",
   },
   {
     icon: FileText,
     title: "Sample Papers",
     description: "Download sample papers to practice",
-    color: "from-purple-500 to-purple-700",
+    color: "from-[#d82209] to-[#b91c1c]",
   },
 ];
 
@@ -113,7 +113,7 @@ export default function TestInfo() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mb-6 sm:mb-8"
         >
-          <div className="bg-blue-50 rounded-xl p-5 sm:p-6 lg:p-8 border border-blue-200">
+          <div className="bg-[#d82209]/10 rounded-xl p-5 sm:p-6 lg:p-8 border border-[#d82209]/20">
             <div className="flex items-center gap-2 sm:gap-3 mb-5 sm:mb-6">
               <Clock className="w-6 h-6 sm:w-7 sm:h-7 text-[#d82209]" />
               <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
